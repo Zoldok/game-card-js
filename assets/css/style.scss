@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: StratosSkyeng, sans-serif;
+    background-color: #004980;
+}
+
+@font-face {
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/stratosskyengweb-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: StratosSkyeng;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../font/stratosskyengweb-regular.woff2') format('woff');
+}
+
+.window {
+    &__fin {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0 0 0 / 40%);
+
+        &_game {
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        &_game2 {
+            width: 480px;
+            height: 459px;
+            background-color: #c2f5ff;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &_imgwin {
+            margin-top: 26px;
+            width: 96px;
+            height: 96px;
+            flex-shrink: 0;
+            background-image: url('../img/Image.png');
+        }
+
+        &_imgconq {
+            margin-top: 32px;
+            width: 96px;
+            height: 96px;
+            flex-shrink: 0;
+            background-image: url('../img/dead.png');
+        }
+
+        &_tex {
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            align-items: center;
+        }
+
+        &_text {
+            margin-top: 8px;
+            font-family: StratosSkyeng, sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 48px;
+            color: #004980;
+        }
+
+        &_text2 {
+            margin-top: 28px;
+            color: #000;
+            font-family: StratosSkyeng, sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+        }
+
+        &_time {
+            margin-top: 10px;
+            color: #000;
+            font-family: StratosSkyeng, sans-serif;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 72px;
+        }
+    }
+}
+
+.content {
+    height: 100vh;
+    background-color: #004980;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__game {
+        width: 480px;
+        height: 459px;
+        background-color: #c2f5ff;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_timer {
+            color: #fff;
+            font-family: StratosSkyeng, sans-serif;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 72px;
+            margin-top: 41px;
+            margin-left: 22px;
+        }
+
+        &_display {
+            display: flex;
+            justify-content: center;
+        }
+
+        &_game {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &_head {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &_header {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 1024px;
+        }
+
+        &_h1 {
+            text-align: center;
+            color: #004980;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 48px;
+            margin-top: 52px;
+            width: 208px;
+        }
+
+        &_game1 label {
+            width: 98px;
+            height: 98px;
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            border-radius: 12px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 72px;
+            color: #0080c1;
+            text-decoration-line: none;
+            transition: 0.3s;
+        }
+
+        &_game1 label:hover {
+            background-color: #d0ffb7;
+            border: 1px solid #1ca92e;
+        }
+
+        &_game1 input[type='radio']:checked + label {
+            background-color: #d0ffb7;
+            border: 1px solid #1ca92e;
+        }
+
+        &_game1 input[type='radio'] {
+            display: none;
+        }
+
+        &_game1 {
+            display: flex;
+            flex-direction: row;
+            margin-top: 48px;
+            gap: 26px;
+        }
+    }
+}
+
+.button {
+    width: 246px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #7ac100;
+    border: 0;
+    font-family: StratosSkyeng, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+
+    &__start {
+        margin-top: 66px;
+    }
+
+    &__restart {
+        margin-top: 52px;
+        margin-right: 23px;
+    }
+
+    &__again {
+        margin-top: 40px;
+    }
+}
+
+.cards {
+    margin-top: 46px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 96px;
+    height: 135px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 10px;
+    perspective: 1000px;
+    cursor: pointer;
+
+    &__front,
+    &__back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+
+    &__front {
+        transform: rotateY(180deg);
+    }
+
+    &__back {
+        transform: rotateY(0deg);
+    }
+
+    &.flipped {
+        & .card {
+            &__front {
+                transform: rotateY(0deg);
+            }
+
+            &__back {
+                transform: rotateY(-180deg);
+            }
+        }
+    }
+}
